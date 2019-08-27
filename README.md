@@ -1,4 +1,4 @@
-# FlexSPI Nor Flash Programming Algorithm for NXP RT1050 EVKB
+# FlexSPI Nor Flash Programming Algorithm for NXP RT1060 EVKB
 
 For more information, refer to the documentation available at:
 
