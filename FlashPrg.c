@@ -29,6 +29,19 @@
 #define SECTOR_SIZE (262144)
 #define BASE_ADDRESS (0x60000000)
 
+#define FLEXSPI_QSPI        0xC0000008
+#define FLEXSPI_QSPIDDR     0xc0100003
+#define FLEXSPI_HYPER1V8    0xc0233009
+#define FLEXSPI_HYPER3V0    0xc0333006
+#define FLEXSPI_MXICOPIDDR  0xc0333006
+#define FLEXSPI_MCRNOCT     0xc0600006
+#define FLEXSPI_MCRNOPI     0xc0603008
+#define FLEXSPI_MCRNOPIDDR  0xc0633008
+#define FLEXSPI_ADSTOPI     0xc0803008
+
+#define FLEXSPI_OPTION0     FLEXSPI_QSPI  /* Change it accordign to your device */
+#define FLEXSPI_OPTION1     0x00000000		/* Change it accordign to your device */
+
 flexspi_nor_config_t config;
 
 /* 
@@ -69,7 +82,8 @@ int Init(unsigned long adr, unsigned long clk, unsigned long fnc)
 {
     status_t status;
     serial_nor_config_option_t option;
-    option.option0.U = 0xc0000006;
+    option.option0.U = FLEXSPI_OPTION0;
+    option.option1.U = FLEXSPI_OPTION1;
     /* Disable Watchdog Power Down Counter */
     WDOG1->WMCR &= ~WDOG_WMCR_PDE_MASK;
     WDOG2->WMCR &= ~WDOG_WMCR_PDE_MASK;
