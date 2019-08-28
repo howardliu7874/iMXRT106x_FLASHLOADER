@@ -1,6 +1,6 @@
 # FlexSPI Nor Flash Programming Algorithm for NXP RT1060 EVKB
 
-##### Customize algorithm for different FlexSPI flash:
+### Customize algorithm for different FlexSPI flash:
 
 Set the **FLEXSPI_OPTION0** macro to **FLEXSPI_xxx** in the FlashPrg.c file according to your flash type. If predefined parameters not meet your device, please set **FLEXSPI_OPTION0** and **FLEXSPI_OPTION1** to the correct value of your flash type. Reference to the end of chapter 8, System Boot, in the  i.MXRT1060 RM for the definition of two options.
 
@@ -51,7 +51,7 @@ struct FlashDevice const FlashDevice  =  {
 
 
 
-##### References:
+### References:
 
 For more information, refer to the documentation available at:
 
