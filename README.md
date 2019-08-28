@@ -1,4 +1,4 @@
-# FlexSPI Nor Flash Programming Algorithm for NXP RT1060 EVKB
+# FlexSPI Flash Programming Algorithm for NXP RT106x
 
 ### Customize algorithm for different FlexSPI flash:
 
